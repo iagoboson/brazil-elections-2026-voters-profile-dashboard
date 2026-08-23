@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 import plotly.express as px
 import streamlit as st
 
@@ -180,14 +181,18 @@ selected_uf = st.sidebar.selectbox(
 
 @st.cache_data
 def load_data(uf):
-    data = pd.read_parquet(
-        "processed/electorate_brazil_2026.parquet"
+    data_dir = Path("processed")
+
+    if uf == "BR":
+        files = sorted(data_dir.glob("electorate_??_2026.parquet"))
+        return pd.concat(
+            [pd.read_parquet(file) for file in files],
+            ignore_index=True,
+        )
+
+    return pd.read_parquet(
+        data_dir / f"electorate_{uf}_2026.parquet"
     )
-
-    if uf != "BR":
-        data = data[data["SG_UF"] == uf].copy()
-
-    return data
 
 
 df = load_data(selected_uf)
