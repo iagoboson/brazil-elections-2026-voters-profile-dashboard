@@ -1,5 +1,7 @@
 # Brazil Elections 2026 — Electorate Profile
 
+[![Open live dashboard](https://img.shields.io/badge/Open_Live_Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://brazil-elections-2026-voters-profile.streamlit.app/)
+
 Interactive bilingual dashboard for exploring the demographic profile of Brazil’s 2026 electorate.
 
 The application covers Brazil, all 26 states, the Federal District, and voters registered abroad. Users can filter by gender, age group, education, marital status, race/color, gender identity, Quilombola identification, and Brazilian Sign Language interpreter status.
