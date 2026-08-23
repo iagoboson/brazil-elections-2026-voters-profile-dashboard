@@ -7,3 +7,4 @@ perfil_eleitorado_2026/
 perfil_eleitorado_2026.zip
 .ipynb_checkpoints/
 01_exploratory_analysis.ipynb
+processed/electorate_brazil_2026.parquet
