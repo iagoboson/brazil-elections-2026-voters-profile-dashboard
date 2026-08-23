@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+.streamlit/secrets.toml
+.venv/
+venv/
+perfil_eleitorado_2026/
+perfil_eleitorado_2026.zip
+.ipynb_checkpoints/
+01_exploratory_analysis.ipynb
